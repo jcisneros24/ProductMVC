@@ -36,6 +36,14 @@ public class xrootDAOImpl implements xrootDAO {
 	@Override
 	public String deleteProduct(ProductBean request) {
 		String response = null;
+		Connection accessDB = null;
+		CallableStatement cs = null;
+		try {
+			accessDB = cn.getConnection();
+			accessDB.prepareCall("");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		return response;
 	}
 
